@@ -1,0 +1,27 @@
+{% load staticfiles %}
+<html>
+    <head>
+        <title>Le Blog de Leslie</title>
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+		<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+		<link rel="stylesheet" href="{% static 'css/blog.css' %}">
+		<link href="https://fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+    </head>
+    <body>
+
+    <div class="page-header">
+        <h1><a href="/">Mon BLOG with DjangoGirls</a></h1>
+    </div>
+    <h2>Tu es une fille ? Tu veux apprendre à créer ton site internet ? Vas voir cette page! ==  <a href="https://djangogirls.org">Site Web Django Girls</a> </h2>
+   
+    <div class="content container">
+        <div class="row">
+            <div class="col-md-8">
+            {% block content %}
+            {% endblock %}
+            </div>
+        </div>
+    </div>
+    </body>
+</html>
+
